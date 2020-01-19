@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		29D27E1D23D4E4F000CA4B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D27E1B23D4E4F000CA4B69 /* Main.storyboard */; };
 		29D27E1F23D4E4F100CA4B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D27E1E23D4E4F100CA4B69 /* Assets.xcassets */; };
 		29D27E2223D4E4F100CA4B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D27E2023D4E4F100CA4B69 /* LaunchScreen.storyboard */; };
+		29D27E2B23D4E53500CA4B69 /* Chapter01View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D27E2A23D4E53500CA4B69 /* Chapter01View.swift */; };
+		29D27E2E23D4E54F00CA4B69 /* SwiftUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 29D27E2D23D4E54F00CA4B69 /* SwiftUIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		29D27E1E23D4E4F100CA4B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29D27E2123D4E4F100CA4B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29D27E2323D4E4F100CA4B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29D27E2A23D4E53500CA4B69 /* Chapter01View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter01View.swift; sourceTree = "<group>"; };
+		29D27E2F23D4E6D700CA4B69 /* metal+SwiftUIKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "metal+SwiftUIKit.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D27E2E23D4E54F00CA4B69 /* SwiftUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,8 @@
 		29D27E1423D4E4F000CA4B69 /* metal+SwiftUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				29D27E2F23D4E6D700CA4B69 /* metal+SwiftUIKit.entitlements */,
+				29D27E2923D4E51500CA4B69 /* Chapters */,
 				29D27E1523D4E4F000CA4B69 /* AppDelegate.swift */,
 				29D27E1723D4E4F000CA4B69 /* SceneDelegate.swift */,
 				29D27E1923D4E4F000CA4B69 /* ViewController.swift */,
@@ -65,6 +72,14 @@
 				29D27E2323D4E4F100CA4B69 /* Info.plist */,
 			);
 			path = "metal+SwiftUIKit";
+			sourceTree = "<group>";
+		};
+		29D27E2923D4E51500CA4B69 /* Chapters */ = {
+			isa = PBXGroup;
+			children = (
+				29D27E2A23D4E53500CA4B69 /* Chapter01View.swift */,
+			);
+			path = Chapters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +98,9 @@
 			dependencies = (
 			);
 			name = "metal+SwiftUIKit";
+			packageProductDependencies = (
+				29D27E2D23D4E54F00CA4B69 /* SwiftUIKit */,
+			);
 			productName = "metal+SwiftUIKit";
 			productReference = 29D27E1223D4E4F000CA4B69 /* metal+SwiftUIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +129,9 @@
 				Base,
 			);
 			mainGroup = 29D27E0923D4E4F000CA4B69;
+			packageReferences = (
+				29D27E2C23D4E54F00CA4B69 /* XCRemoteSwiftPackageReference "SwiftUIKit" */,
+			);
 			productRefGroup = 29D27E1323D4E4F000CA4B69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29D27E1A23D4E4F000CA4B69 /* ViewController.swift in Sources */,
+				29D27E2B23D4E53500CA4B69 /* Chapter01View.swift in Sources */,
 				29D27E1623D4E4F000CA4B69 /* AppDelegate.swift in Sources */,
 				29D27E1823D4E4F000CA4B69 /* SceneDelegate.swift in Sources */,
 			);
@@ -284,7 +306,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "metal+SwiftUIKit/metal+SwiftUIKit.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 8M8SAX62V2;
 				INFOPLIST_FILE = "metal+SwiftUIKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -293,6 +317,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ol.metal-SwiftUIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,7 +327,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "metal+SwiftUIKit/metal+SwiftUIKit.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 8M8SAX62V2;
 				INFOPLIST_FILE = "metal+SwiftUIKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +338,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ol.metal-SwiftUIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29D27E2C23D4E54F00CA4B69 /* XCRemoteSwiftPackageReference "SwiftUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zmeriksen/SwiftUIKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29D27E2D23D4E54F00CA4B69 /* SwiftUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29D27E2C23D4E54F00CA4B69 /* XCRemoteSwiftPackageReference "SwiftUIKit" */;
+			productName = SwiftUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 29D27E0A23D4E4F000CA4B69 /* Project object */;
 }

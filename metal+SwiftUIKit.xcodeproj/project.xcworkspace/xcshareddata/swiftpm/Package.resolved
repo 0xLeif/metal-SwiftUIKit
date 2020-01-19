@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftUIKit",
+        "repositoryURL": "https://github.com/zmeriksen/SwiftUIKit.git",
+        "state": {
+          "branch": "develop",
+          "revision": "dc9c3a2cc029d0cf73a22a0cf15dcbc2323f5b31",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
